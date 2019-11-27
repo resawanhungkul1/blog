@@ -21,7 +21,7 @@ if(!$_SESSION['login']){
 <!-- End Header -->
   <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
   <!-- Navbar -->
-  <?php  include('../layouts/includes/navbar.p/hp') ?>
+  <?php  include('../layouts/includes/navbar.php') ?>
   <!-- End Navbar -->
   <!-- sidebar -->
   <?php  include('../layouts/includes/sidebar.php') ?>

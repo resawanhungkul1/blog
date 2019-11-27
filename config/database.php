@@ -18,4 +18,5 @@
 		}
 	}  
 	$db=new  Database();
+
 ?>
