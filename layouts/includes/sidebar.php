@@ -1,25 +1,19 @@
        <div class="sidebar">
         <nav class="sidebar-nav">
           <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../admin">
-                <i class="nav-icon icon-speedometer"></i>Home 
-                <span class="badge badge-primary">NEW</span>
-              </a>
-            </li>
               <li class="nav-item">
-              <a class="nav-link" href="../admin">
+              <a class="nav-link" href="../index.php">
                 <i class="nav-icon icon-speedometer"></i>Home 
                 <span class="badge badge-primary">NEW</span>
               </a>
             </li>
             <li class="nav-title">Manajemen Blog</li>
             <li class="nav-item">
-              <a class="nav-link" href="../kategori">
+              <a class="nav-link" href="../admin/kategori/">
                 <i class="nav-icon icon-drop"></i>Kategori</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="typography.html">
+              <a class="nav-link" href="../admin/artikel/">
                 <i class="nav-icon icon-pencil"></i> Artikel</a>
             </li>
             <li class="nav-title">Components</li>

@@ -1,5 +1,5 @@
 <?php 
-include('../config/database.php');
+
 class Artikel extends Database
 {
 	public function index()

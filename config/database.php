@@ -18,5 +18,7 @@
 		}
 	}  
 	$db=new  Database();
+	include 'kategori.php';
+	include 'artikel.php';
 
 ?>

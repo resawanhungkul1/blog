@@ -33,9 +33,13 @@ if(!$_SESSION['login']){
     <div class="app-body">
 
         <!-- Main content --> 
-        <main class="main"></main>
+        <main class="main">
+
+
         <!-- End Main content -->
+        </main>
     </div>
+
 
     <!-- CoreUI and necessary plugins-->
 <!-- Script -->

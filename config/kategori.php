@@ -1,5 +1,4 @@
 <?php 
-include('../config/database.php');
 class Kategori extends Database{
 	//Menampilkan Semua Data
 	public function index(){
@@ -22,7 +21,7 @@ class Kategori extends Database{
 		$datakategori=mysqli_query(
 			$this->koneksi,
 			"select*from kategori where id='$id'");
-		return $datakategori
+		return $datakategori;
 	}
 	//Menampilkan Data Berdasrkan id
 	public function edit($id)
@@ -30,7 +29,7 @@ class Kategori extends Database{
 		$datakategori=mysqli_query(
 			$this->koneksi,
 			"select*from kategori where id='$id'");
-		return $datakategori
+		return $datakategori;
 	}
 	//Mengupdate Data Berdasarkan id
 	public function update($id,$nama,$slug)
