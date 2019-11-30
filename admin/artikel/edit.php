@@ -68,9 +68,9 @@ if (!$_SESSION['login']) {
                                         }
                                         // var_dump($artikel);                                    
                                         ?>
-                                    <form action="/admin/artikel/proses.php?aksi=update" method="post" enctype="multipart/form-data">
+                                    <form action="proses.php?aksi=update" method="post" enctype="multipart/form-data">
                                         <input type="hidden" name="fotoLama" value="<?php echo $data['foto']; ?>">
-                                        <input type="hidden" name="id_user" value="<?php echo $user['id'] ?>">
+
                                         <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
                                         <div class="form-group">
                                             <label for="">Judul</label>

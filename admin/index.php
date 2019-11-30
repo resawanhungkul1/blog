@@ -1,52 +1,69 @@
-<?php 
+
+  
+<?php
 session_start();
-if(!$_SESSION['login']){
-     echo "<script type='text/javascript'>
-    alert('Maaf  Anda Harus Login Terlebih Dahulu');
-    window.location='../login.php'</script>";
-}else{
-  include('../config/database.php');
-  $user=new Database();
-  $user=mysqli_query($user->koneksi,
-    "SELECT*FROM users WHERE  password='$_SESSION[login]'");
-  //var_dump($_SESSION['login']);
-  $user=mysqli_fetch_array($user);
+if (!$_SESSION['login']) {
+    echo "<script type='text/javascript'>
+        alert('Maaf anda harus login terlebih dahulu!');
+            window.location = '../login.php'
+        </script>";
+} else {
+    include('../config/database.php');
+    $user = new Database();
+    $user = mysqli_query(
+        $user->koneksi,
+        "select * from users where password='$_SESSION[login]'"
+    );
+    // var_dump($_SESSION['login']);
+    $user = mysqli_fetch_array($user); ?>
 
+    <!-- Header -->
+    <?php include('../layouts/includes/head.php') ?>
+    <!-- End Header -->
 
- ?>
+    <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+        <!-- Navbar -->
+        <?php include('../layouts/includes/navbar.php') ?>
+        <!-- End Navbar -->
+        <div class="app-body">
+            <!-- Sidebar -->
+            <?php include('../layouts/includes/sidebar.php') ?>
+            <!-- End Sidebar -->
+            <!-- Main Content -->
+            <main class="main">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Admin</a>
+                    </li>
+                    <li class="breadcrumb-item active">Dashboard</li>
+                    <!-- Breadcrumb Menu-->
+                    <li class="breadcrumb-menu d-md-down-none">
+                        <div class="btn-group" role="group" aria-label="Button group">
+                            <a class="btn" href="#">
+                                <i class="icon-speech"></i>
+                            </a>
+                            <a class="btn" href="./">
+                                <i class="icon-graph"></i>  Dashboard</a>
+                            <a class="btn" href="#">
+                                <i class="icon-settings"></i>  Settings</a>
+                        </div>
+                    </li>
+                </ol>
+            </main>
+            <!-- End Main Conten -->
 
+        </div>
+        <!-- Footer -->
+        <?php include('../layouts/includes/footer.php') ?>
+        <!-- End Footer -->
+        <!-- CoreUI and necessary plugins-->
+        <!-- Scripts -->
+        <?php include('../layouts/includes/scripts.php') ?>
+        <!-- End Scripts -->
+    </body>
 
-<!-- Header -->
-<?php  include('../layouts/includes/head.php') ?>
-<!-- End Header -->
-  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
-  <!-- Navbar -->
-  <?php  include('../layouts/includes/navbar.php') ?>
-  <!-- End Navbar -->
-  <!-- sidebar -->
-  <?php  include('../layouts/includes/sidebar.php') ?>
-  <!-- End sidebar -->
-  <!-- footer -->
-    <?php  include('../layouts/includes/footer.php') ?>
-    <!-- End footer -->
+    </html>
+<?php
+} ?>
 
-    <div class="app-body">
-
-        <!-- Main content --> 
-        <main class="main">
-
-
-        <!-- End Main content -->
-        </main>
-    </div>
-
-
-    <!-- CoreUI and necessary plugins-->
-<!-- Script -->
- <?php  include('../layouts/includes/scripts.php') ?>
-<!-- End Script -->
-  </body>
-</html>
-<?php 
-}
- ?>

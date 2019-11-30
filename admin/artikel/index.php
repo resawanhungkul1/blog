@@ -56,7 +56,7 @@ if (!$_SESSION['login']) {
                             <div class="card">
                                 <div class="card-header">
                                     Daftar Kategori
-                                    <a href="create.php" class="btn btn-sm btn-info float-md-right">Tambah</a>
+                                    <a href="create.php" class="btn btn-sm btn-outline-danger float-md-right">Tambah</a>
                                 </div>
 
                                 <div class="card-body">

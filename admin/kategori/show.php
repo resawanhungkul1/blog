@@ -1,21 +1,14 @@
-
-  
 <?php foreach ($kategori->show($data['id']) as $data) {
     $id = $data['id'];
     $nama = $data['nama'];
-   $slug = preg_replace(
-  '/[^a-z0-9]+/i',
-     '-',
-    trim(strtolower($data['slug']))
-     );
 }
 ?>
-<div class="modal fade kategori-<?php echo $data['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade kategori-show-<?php echo $data['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form action="proses.php?aksi=update" method="POST">
+            <form action="/admin/kategori/proses.php?aksi=update" method="POST">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Edit kategori </h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Show kategori </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -25,15 +18,16 @@
                     <div class="form-group">
                         <label>Nama Kategori</label>
                         <input type="text" name="nama" value="<?php echo $data['nama']; ?>" class="form-control" readonly>
-                        <label>Nama Slug</label>
-                        <input type="text" name="slug" value="<?php echo $data['slug']; ?>" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Slug Kategori</label>
+                        <input type="text" name="nama" value="<?php echo $data['slug']; ?>" class="form-control" readonly>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button"  data-dismiss="modal" class="btn btn-block btn-primary">Close</button>
+                    <button type="button" class="btn btn-info btn-block" data-dismiss="modal">Close</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-

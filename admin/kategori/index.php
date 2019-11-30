@@ -70,7 +70,7 @@ if (!$_SESSION['login']) {
 
                                                         <td>
                                                             <a href="proses.php?id=<?php echo $data['id']; ?>&aksi=delete" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda Yakin ?')">Delete</a> |
-                                                             <button type="button" class="btn btn-sm btn-warning btn-outline" data-toggle="modal" data-target=".kategori-<?php echo $data['id']; ?>">Show</button>
+                                                             <button type="button" class="btn btn-sm btn-warning btn-outline" data-toggle="modal" data-target=".kategori-show-<?php echo $data['id']; ?>">Show</button>
                                                             <button type="button" class="btn btn-sm btn-success btn-outline" data-toggle="modal" data-target=".kategori-<?php echo $data['id']; ?>">Edit</button>
 
                                                         </td>

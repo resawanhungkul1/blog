@@ -2,18 +2,18 @@
         <nav class="sidebar-nav">
           <ul class="nav">
               <li class="nav-item">
-              <a class="nav-link" href="../index.php">
+              <a class="nav-link" href="/blog/admin/">
                 <i class="nav-icon icon-speedometer"></i>Home 
                 <span class="badge badge-primary">NEW</span>
               </a>
             </li>
             <li class="nav-title">Manajemen Blog</li>
             <li class="nav-item">
-              <a class="nav-link" href="../admin/kategori/">
+              <a class="nav-link" href="/blog/admin/kategori/">
                 <i class="nav-icon icon-drop"></i>Kategori</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../admin/artikel/">
+              <a class="nav-link" href="/blog/admin/artikel/">
                 <i class="nav-icon icon-pencil"></i> Artikel</a>
             </li>
             <li class="nav-title">Components</li>
